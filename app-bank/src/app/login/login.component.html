@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="formulario">
+    <h1 class="nome">BANK</h1>
+    <p class="frase-nome">Faça seu login</p>
+    <form [formGroup]="example" (ngSubmit)="onSubmit()" novalidate>
+
+      <div class="form-item">
+        <input matInput class="input-cpf" type="text" name="cpf" id="cpf" formControlName="cpf" mask="000.000.000-00"
+          placeholder="CPF" required>
+      </div>
+      <div class="input-senha">
+        <input matInput class="senha" type="number" placeholder="Senha" [type]="hide ? 'password' : 'text'"
+          formControlName="senha" mask="000000">
+        <button type="button" class="btn-visibility" mat-icon-button matSuffix (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </div>
+      <button class="btn-login" type="submit" [disabled]="!example.valid" loader="isLoading" >Continuar</button>
+    </form>
+    <div>
+      <a href="">Esqueci minha senha
+        <mat-icon class="icon" aria-hidden="false" aria-label="Exemplo de ícone inicial" fontIcon="chevron_right">
+        </mat-icon>
+      </a>
+      <a href="">Ainda não sou cliente
+        <mat-icon aria-hidden="false" aria-label="Exemplo de ícone inicial" fontIcon="chevron_right"> </mat-icon>
+      </a>
+    </div>
+  </div>
+  <div class="container-frase">
+    <div class="frase">
+      <h1 class="welcome">WELCOME TO</h1>
+      <h1 class="bank">BANK</h1>
+    </div>
+    <p class="paragrafo-login">login to access your account</p>
+  </div>
+
+</div>

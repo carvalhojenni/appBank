@@ -1,0 +1,194 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+  height: 187px;
+}
+
+.nome {
+  font-size: 40px;
+  margin-bottom: 38px;
+  color: #443C68;
+  position: absolute;
+  right: 85%;
+  bottom: 84%;
+  font-weight: bold;
+}
+
+.frase-nome {
+  color: #676D79;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-cpf {
+  width: 25vw;
+  height: 22px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+
+input {
+  border: none;
+}
+
+.input-senha {
+  padding: 10px;
+  display: flex;
+  border-radius: 10px;
+  width: 25vw;
+  height: 22px;
+  border: none;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+}
+
+.input-senha input {
+  width: 150%;
+  height: 32px;
+  border: none;
+}
+
+.senha {
+  width: 20%;
+}
+
+.btn-visibility {
+  color: #39334B;
+  border: none;
+  background: none;
+  margin-left: 67px;
+}
+
+.btn-login {
+  width: 26vw;
+  height: 46px;
+  background: #39334B;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 10%;
+}
+
+.btn-login:hover {
+  background-color: #635985;
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #443C68;
+  padding: 5px;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.container-frase {
+  width: 50vw;
+  height: 100vh;
+  background: linear-gradient(142.45deg, #18122B 45.14%, #39334B 100.67%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 1%;
+  border-radius: 10px 0 0 10px
+}
+
+.frase {
+  display: flex;
+}
+.welcome{
+  font-size: 38px;
+  color: #A4A7AF;
+  padding-right: 10px;
+}
+
+.bank {
+  font-size: 40px;
+  margin-bottom: 38px;
+  color: #fff;
+}
+
+.paragrafo-login{
+  color: #A4A7AF;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media (max-width: 710px) {
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+  }
+
+  .nome {
+    font-size: 40px;
+    margin-bottom: 38px;
+    position: inherit;
+    color: #fff;
+  }
+
+  .frase-nome {
+    font-size: 14px;
+    color: #C4C4C4;
+  }
+
+  form {
+    width: 50vw;
+  }
+
+  .input-cpf {
+    width: 75vw;
+    margin-bottom: 10px;
+
+  }
+
+  .input-senha {
+    width: 75vw;
+    margin-bottom: 10px;
+  }
+
+  .btn-login {
+    width: 80vw;
+  }
+
+  a {
+    color: #A4A7AF;
+    width: 163px;
+  }
+
+  .container-frase {
+    display: none;
+  }
+
+}
