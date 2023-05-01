@@ -14,6 +14,9 @@ import { NgxMaskModule } from 'ngx-mask';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { SaldoComponent } from './components/saldo/saldo.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CartaoComponent } from './components/cartao/cartao.component';
 
 
 
@@ -21,7 +24,10 @@ import { HomeComponent } from './home/home.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    SaldoComponent,
+    CarouselComponent,
+    CartaoComponent
   ],
   imports: [
     BrowserModule,
