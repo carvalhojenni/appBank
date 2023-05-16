@@ -17,6 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { SaldoComponent } from './components/saldo/saldo.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
+import { ExtratoComponent } from './components/extrato/extrato.component';
 
 
 
@@ -27,7 +28,8 @@ import { CartaoComponent } from './components/cartao/cartao.component';
     HomeComponent,
     SaldoComponent,
     CarouselComponent,
-    CartaoComponent
+    CartaoComponent,
+    ExtratoComponent
   ],
   imports: [
     BrowserModule,

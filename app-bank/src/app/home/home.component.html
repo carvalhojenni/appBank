@@ -1,11 +1,13 @@
-<div class="container">
+<div class="container-home">
   <div class="info">
-    <h1 class="nome">BANK</h1>
-    <div class="input-busca">
-      <input matInput class="busca" type="search" placeholder="Busca" formControlName="busca">
-      <button class="btn-busca" type="button">
-        <mat-icon aria-hidden="false" aria-label="Exemplo de ícone inicial" fontIcon="search"> </mat-icon>
-    </button>
+    <div class="container-info-input">
+      <h1 class="nome">BANK</h1>
+      <div class="input-busca">
+        <input matInput class="busca" type="search" placeholder="Busca" formControlName="busca">
+        <button class="btn-busca" type="button">
+          <mat-icon aria-hidden="false" aria-label="Exemplo de ícone inicial" fontIcon="search"> </mat-icon>
+        </button>
+      </div>
     </div>
     <div class="info-perfil">
       <div class="container-perfil">
@@ -20,35 +22,38 @@
       <img class="foto-perfil" src="" alt="">
     </div>
   </div>
-    <div class="box-info-conta">
-      <div class="container-btn">
-        <button class="btn-home">
-          <img src="../../assets/home.svg" alt="">
-        </button>
-        <button class="btn-pagar">
-          <img src="../../assets/pagar.svg" alt="">
-        </button>
-        <button class="btn-mais">
-          <img src="../../assets/mais.svg" alt="">
-        </button>
+  <div class="box-info-conta">
+    <div class="container-btn">
+      <button class="btn-home">
+        <img src="../../assets/home.svg" alt="">
+      </button>
+      <button class="btn-pagar">
+        <img src="../../assets/pagar.svg" alt="">
+      </button>
+      <button class="btn-mais">
+        <img src="../../assets/mais.svg" alt="">
+      </button>
+    </div>
+
+    <div class="container-infos">
+      <div class="saldo">
+        <app-saldo></app-saldo>
+        <div class="carrossel">
+          <app-carousel></app-carousel>
+        </div>
+        <div class="cartão">
+          <app-cartao></app-cartao>
+        </div>
       </div>
 
-      <div class="container-infos">
-          <div class="saldo">
-            <app-saldo></app-saldo>
-            <div class="carrossel">
-              <app-carousel></app-carousel>
-            </div>
-            <div class="cartão">
-              <app-cartao></app-cartao>
-            </div>
-          </div>
+      <div class="linha-vertical">
+      </div>
 
-        <div class="extrato">
-        </div>
-
+      <div class="extrato">
+        <app-extrato></app-extrato>
       </div>
     </div>
+  </div>
 
 
 </div>

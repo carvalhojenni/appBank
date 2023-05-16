@@ -1,7 +1,8 @@
-.container {
+.container-login {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+  background-color: #fff;
 }
 
 .formulario {
@@ -124,7 +125,7 @@ a:hover {
   display: flex;
 }
 .welcome{
-  font-size: 38px;
+  font-size: 34px;
   color: #A4A7AF;
   padding-right: 10px;
 }
@@ -142,13 +143,14 @@ a:hover {
 }
 
 @media (max-width: 710px) {
-
-
-  .container {
+  .container-login {
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 200px;
+    justify-content: center;
+     background: linear-gradient(142.45deg, #18122B 45.14%, #39334B 100.67%);;
   }
 
   .nome {
