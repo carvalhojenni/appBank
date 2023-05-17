@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./cartao.component.css']
 })
 export class CartaoComponent {
+  isHovered: boolean = false;
 
+  changeDiv() {
+    this.isHovered = true;
+  }
+
+  resetDiv() {
+    this.isHovered = false;
+  }
 }

@@ -2,21 +2,34 @@
   <div class="formulario">
     <h1 class="nome">BANK</h1>
     <p class="frase-nome">Faça seu login</p>
-    <form [formGroup]="example" (ngSubmit)="onSubmit()" novalidate>
+    <form (ngSubmit)="submitForm()" #form="ngForm" novalidate>
 
       <div class="form-item">
-        <input matInput class="input-cpf" type="text" name="cpf" id="cpf" formControlName="cpf" mask="000.000.000-00"
+        <input [(ngModel)]="cpf"
+         matInput class="input-cpf" type="text" name="cpf" id="cpf"
+         formControlName="cpf" mask="000.000.000-00"
           placeholder="CPF" required>
       </div>
       <div class="input-senha">
-        <input matInput class="senha" type="number" placeholder="Senha" [type]="hide ? 'password' : 'text'"
+        <input type="password" id="senha"
+        name="senha" [(ngModel)]="senha" pattern="[0-9]{6}" required
+        matInput
+        class="senha"
+         placeholder="Senha"
+         [type]="hide ? 'password' : 'text'"
           formControlName="senha" mask="000000">
-        <button type="button" class="btn-visibility" mat-icon-button matSuffix (click)="hide = !hide"
-          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+
+        <button
+        type="button"
+        class="btn-visibility"
+        mat-icon-button
+        matSuffix (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </div>
-      <button class="btn-login" type="submit" [disabled]="!example.valid" loader="isLoading" >Continuar</button>
+      <button  [disabled]="form.invalid"
+      class="btn-login" type="submit"  loader="isLoading" >Continuar</button>
     </form>
     <div>
       <a href="">Esqueci minha senha
@@ -28,6 +41,15 @@
       </a>
     </div>
   </div>
+
+  <mat-dialog-content class="modal" *ngIf="showErrorModal">
+    <div class="modal-content">
+      <h2>Erro!</h2>
+      <p>O formulário está vazio. Preencha todos os campos.</p>
+      <button (click)="closeModal()">Fechar</button>
+    </div>
+  </mat-dialog-content>
+
   <div class="container-frase">
     <div class="frase">
       <h1 class="welcome">WELCOME TO</h1>
@@ -35,5 +57,6 @@
     </div>
     <p class="paragrafo-login">login to access your account</p>
   </div>
+
 
 </div>

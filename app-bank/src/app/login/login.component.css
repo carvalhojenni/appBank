@@ -142,6 +142,47 @@ a:hover {
   font-weight: 400;
 }
 
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.modal-content h2{
+  color: red;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.modal-content p{
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.modal-content button{
+  padding: 10px 30px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: #f44336;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
 @media (max-width: 710px) {
   .container-login {
     height: 100vh;

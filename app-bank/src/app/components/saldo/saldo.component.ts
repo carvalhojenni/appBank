@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./saldo.component.css']
 })
 export class SaldoComponent {
-  hide = true;
+  hide = false;
+  numberValue: string = '3.000,00';
+  isClicked: boolean = false;
+
+  toggleDiv() {
+    this.isClicked = !this.isClicked;
+    this.hide = true;
+  }
 }

@@ -1,10 +1,9 @@
 <div class="container-saldo">
   <h3 class="discricao-saldo">Saldo disponível em conta:</h3>
   <div class="container-saldo-total">
-    <span  class="saldo-total"  ng-Hide="hide ? 'password' : 'text'">R$ 3.000,00</span>
-    <button type="button" class="btn-visibility" mat-icon-button matSuffix (click)="hide = !hide"
-    [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    <span  class="saldo-total"  [ngClass]="{'number': !isClicked, 'asterisk': isClicked}">R$   {{ isClicked ? '****' : numberValue }} </span>
+    <button type="button" class="btn-visibility" mat-icon-button matSuffixV (click)="toggleDiv()">
+    <mat-icon>{{isClicked ? 'visibility_off' : 'visibility'}}</mat-icon>
   </button>
   </div>
 </div>

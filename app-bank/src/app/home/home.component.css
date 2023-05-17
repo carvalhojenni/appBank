@@ -150,8 +150,44 @@
 
 .linha-vertical {
   width: 5px;
-  height: 700px;
+  height: 588px;
   background: rgba(63, 63, 64, 0.09);
   border-radius: 10px;
   margin-top: 25px;
+}
+
+@media (max-width:  1179px) {
+  .linha-vertical{
+    height: 511px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container-info-input{
+    display: none;
+  }
+
+  .info-perfil{
+    flex-direction: row-reverse;
+  }
+
+  .container-perfil{
+    align-items: flex-start;
+  }
+
+  .container-btn{
+    display: none;
+  }
+
+  .container-infos{
+    width: 100%;
+    height: 90vh;
+    border-radius: 40px 40px 0 0;
+  }
+
+  .linha-vertical{
+    display: none;
+  }
+
+
 }

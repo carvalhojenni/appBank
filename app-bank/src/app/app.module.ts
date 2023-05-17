@@ -18,7 +18,7 @@ import { SaldoComponent } from './components/saldo/saldo.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
-
+import {MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -39,6 +39,7 @@ import { ExtratoComponent } from './components/extrato/extrato.component';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
+    MatDialogModule,
     NgxMaskModule.forRoot({
       dropSpecialCharacters: false
     })
