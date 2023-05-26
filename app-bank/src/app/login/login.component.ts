@@ -27,9 +27,6 @@ export class LoginComponent implements OnInit {
   //   this.router.navigate(['home']);
   // }
 
-
-
-
   submitForm() {
     if (this.cpf || this.senha) {
       this.showErrorModal = true;

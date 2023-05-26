@@ -83,7 +83,6 @@
   .card-cartao {
     width: 360px;
   }
-
   .tipo-cartao {
     font-size: 16px;
   }
@@ -95,9 +94,9 @@
   .info-inferiores img {
     width: 40px;
   }
-
+/*
   .hover-div:hover {
     width: 280px;
     height: 136px;
-  }
+  } */
 }

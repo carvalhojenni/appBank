@@ -1,9 +1,11 @@
 <div class="container-saldo">
   <h3 class="discricao-saldo">Saldo disponível em conta:</h3>
   <div class="container-saldo-total">
-    <span  class="saldo-total"  [ngClass]="{'number': !isClicked, 'asterisk': isClicked}">R$   {{ isClicked ? '****' : numberValue }} </span>
-    <button type="button" class="btn-visibility" mat-icon-button matSuffixV (click)="toggleDiv()">
-    <mat-icon>{{isClicked ? 'visibility_off' : 'visibility'}}</mat-icon>
-  </button>
-  </div>
+      <button class="btn-extrato" (click)=extrato()>
+      <span  class="saldo-total"  [ngClass]="{'number': !isClicked, 'asterisk': isClicked}">R$   {{ isClicked ? '****' : numberValue }} </span>
+    </button>
+      <button type="button" class="btn-visibility" mat-icon-button matSuffixV (click)="toggleDiv()">
+      <mat-icon>{{isClicked ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+    </div>
 </div>

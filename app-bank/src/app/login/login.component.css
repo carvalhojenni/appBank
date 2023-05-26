@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--white);
 }
 
 .formulario {
@@ -16,7 +16,7 @@
 .nome {
   font-size: 40px;
   margin-bottom: 38px;
-  color: #443C68;
+  color: var(--blue-quaternary);
   position: absolute;
   right: 85%;
   bottom: 84%;
@@ -55,7 +55,7 @@ input {
   width: 25vw;
   height: 22px;
   border: none;
-  background-color: #fff;
+  background-color: var(--white);
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
@@ -73,7 +73,7 @@ input {
 }
 
 .btn-visibility {
-  color: #39334B;
+  color: var(--blue-primary);
   border: none;
   background: none;
   margin-left: 67px;
@@ -82,16 +82,16 @@ input {
 .btn-login {
   width: 26vw;
   height: 46px;
-  background: #39334B;
+  background: var(--blue-primary);
   border-radius: 10px;
   border: none;
   font-size: 18px;
-  color: #FFFFFF;
+  color: var(--white);
   margin-bottom: 10%;
 }
 
 .btn-login:hover {
-  background-color: #635985;
+  background-color: var(--blue-secondary);
   transform: scale(1.1);
   transition: all 0.5s;
 }
@@ -101,18 +101,18 @@ a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #443C68;
+  color: var(--blue-quaternary);
   padding: 5px;
 }
 
 a:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .container-frase {
   width: 50vw;
   height: 100vh;
-  background: linear-gradient(142.45deg, #18122B 45.14%, #39334B 100.67%);
+  background: linear-gradient(142.45deg, var(--blue-tertiary) 45.14%, var(--blue-primary) 100.67%);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -126,18 +126,18 @@ a:hover {
 }
 .welcome{
   font-size: 34px;
-  color: #A4A7AF;
+  color: var(--gray-secondary);
   padding-right: 10px;
 }
 
 .bank {
   font-size: 40px;
   margin-bottom: 38px;
-  color: #fff;
+  color: var(--white);
 }
 
 .paragrafo-login{
-  color: #A4A7AF;
+  color: var(--gray-secondary);
   font-size: 18px;
   font-weight: 400;
 }
@@ -148,27 +148,27 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .modal-content{
-  background-color: #fff;
+  background-color: var(--white);
   padding: 20px;
   border-radius: 10px;
   margin: 15px;
 }
 
 .modal-content h2{
-  color: red;
+  color: var(--red-500);
   font-size: 23px;
   font-weight: bold;
 }
 
 .modal-content p{
-  color: rgba(0, 0, 0, 0.38);
+  color: var(--black);
   font-size: 19px;
   font-weight: 500;
 }
@@ -177,10 +177,10 @@ a:hover {
   padding: 10px 30px;
   font-size: 15px;
   font-weight: 600;
-  background-color: #f44336;
+  background-color: var(--red-500);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: var(--white);
 }
 
 @media (max-width: 710px) {
@@ -191,19 +191,19 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     background: linear-gradient(142.45deg, #18122B 45.14%, #39334B 100.67%);;
+     background: linear-gradient(142.45deg, var(--blue-tertiary) 45.14%, var(--blue-primary) 100.67%);;
   }
 
   .nome {
     font-size: 40px;
     margin-bottom: 38px;
     position: inherit;
-    color: #fff;
+    color: var(--white);
   }
 
   .frase-nome {
     font-size: 14px;
-    color: #C4C4C4;
+    color: var(--gray-primary);
   }
 
   form {
@@ -226,7 +226,7 @@ a:hover {
   }
 
   a {
-    color: #A4A7AF;
+    color: var(--gray-secondary);
     width: 163px;
   }
 

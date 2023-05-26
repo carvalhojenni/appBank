@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-saldo',
-  templateUrl: './saldo.component.html',
-  styleUrls: ['./saldo.component.css']
+  selector: 'app-transferencia',
+  templateUrl: './transferencia.component.html',
+  styleUrls: ['./transferencia.component.css']
 })
-export class SaldoComponent {
+export class TransferenciaComponent {
+  valido! : string;
   hide = false;
   numberValue: string = '3.000,00';
   isClicked: boolean = false;
@@ -14,13 +15,18 @@ export class SaldoComponent {
   constructor(private router: Router) { }
   ngOnInit(): void {
   }
+
   toggleDiv() {
     this.isClicked = !this.isClicked;
     this.hide = true;
   }
 
-  extrato(){
-    this.router.navigate(['page-extrato'])
+  close(){
+    this.router.navigate(['home']);
+  }
+
+  valorTransferencia(){
+    this.router.navigate(['contato-transferir'])
   }
 
 }

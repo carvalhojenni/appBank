@@ -19,6 +19,9 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { CartaoComponent } from './components/cartao/cartao.component';
 import { ExtratoComponent } from './components/extrato/extrato.component';
 import {MatDialogModule } from '@angular/material/dialog';
+import { TransferenciaComponent } from './transferencia/transferencia.component';
+import { ContatoTransferirComponent } from './contato-transferir/contato-transferir.component';
+import { PageExtratoComponent } from './page-extrato/page-extrato.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import {MatDialogModule } from '@angular/material/dialog';
     SaldoComponent,
     CarouselComponent,
     CartaoComponent,
-    ExtratoComponent
+    ExtratoComponent,
+    TransferenciaComponent,
+    ContatoTransferirComponent,
+    PageExtratoComponent
   ],
   imports: [
     BrowserModule,

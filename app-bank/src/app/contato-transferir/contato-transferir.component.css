@@ -1,0 +1,68 @@
+.container-contato-transferir{
+  height: 90vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
+
+.btn-close{
+  color: var(--gray-secondary);
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+  display: flex;
+  padding: 0;
+}
+
+.container-contato-transferir h2{
+  font-size: 28px;
+}
+.content-contato{
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-quaternary);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.btn-visibility{
+  border: none;
+  background: none;
+}
+
+.btn-enviar{
+  height: 60px;
+  background: var(--red);
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+button:disabled {
+  background: var(--gray-secondary);
+}
+
+.content-input{
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
+}
+
+.input-saldo{
+  font-size: 20px;
+  border: none;
+  width: 100%;
+}
+
+hr{
+  height: 2px;
+  background-color: #676D79;
+  width: 100%;
+}

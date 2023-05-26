@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+  --white: #fff;
+  --gray-primary: #C4C4C4;
+  --gray-secondary: #A4A7AF;
+  --gray-tertiary: #D9D9D9;
+  --gray-quaternary: #676D79;
+
+  --blue-primary: #39334B;
+  --blue-secondary: #635985;
+  --blue-tertiary: #18122B;
+  --blue-quaternary :#443C68;
+
+  --black: #00000080;
+  --black-primary: #3f3f4017;
+
+  --green-300: #00b37e;
+  --green-500: #00875f;
+
+  --red-500: #f44336;
+  --red:#FF0000;
+}
+
 html,
 body {
   margin: 0;
@@ -8,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #18122B;
+  background-color: var(--blue-tertiary);
 }
 
 @media (max-width: 710px){

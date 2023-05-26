@@ -6,6 +6,13 @@
   justify-content: space-between;
 }
 
+.btn-extrato{
+  background: none;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
 .discricao-saldo{
   font-size: 14px;
     color: #676D79;
@@ -15,7 +22,7 @@
 .container-saldo-total{
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 100%;
 }
 
 .saldo-total{
