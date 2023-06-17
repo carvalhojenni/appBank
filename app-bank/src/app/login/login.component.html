@@ -5,19 +5,18 @@
     <form (ngSubmit)="submitForm()" #form="ngForm" novalidate>
 
       <div class="form-item">
-        <input [(ngModel)]="cpf" matInput class="input-cpf" type="text" name="cpf" id="cpf" formControlName="cpf"
+        <input [(ngModel)]="cpf" matInput class="input-cpf" type="text" name="cpf" id="cpf"
           mask="000.000.000-00" placeholder="CPF" required>
       </div>
       <div class="input-senha">
         <input type="password" id="senha" name="senha" [(ngModel)]="senha" pattern="[0-9]{6}" required matInput
-          class="senha" placeholder="Senha" [type]="hide ? 'password' : 'text'" formControlName="senha" mask="000000">
-
+          class="senha" placeholder="Senha" [type]="hide ? 'password' : 'text'"  mask="000000">
         <button type="button" class="btn-visibility" mat-icon-button matSuffix (click)="hide = !hide"
           [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </div>
-      <button [disabled]="form.invalid" class="btn-login" type="submit" loader="isLoading">Continuar</button>
+      <button class="btn-login" type="submit" loader="isLoading">Continuar</button>
     </form>
     <div>
       <a href="">Esqueci minha senha
@@ -30,13 +29,15 @@
     </div>
   </div>
 
-  <mat-dialog-content class="modal" *ngIf="showErrorModal">
+  <div class="modal" *ngIf="errorModal">
     <div class="modal-content">
-      <h2>Erro!</h2>
-      <p>O formulário está vazio. Preencha todos os campos.</p>
-      <button (click)="closeModal()">Fechar</button>
+      <button (click)="closeErrorModal()">
+        <mat-icon fontIcon="close"></mat-icon>
+      </button>
+      <h3>Erro de autenticação</h3>
+      <p>{{ errorMessage }}</p>
     </div>
-  </mat-dialog-content>
+  </div>
 
   <div class="container-frase">
     <div class="frase">

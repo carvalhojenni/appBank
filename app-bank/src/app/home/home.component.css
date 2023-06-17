@@ -61,7 +61,7 @@
 }
 
 .usuario {
-  font-size: 19px;
+  font-size: 17px;
   color: var(--white);
   font-weight: initial;
 }
@@ -79,7 +79,7 @@
   height: 60px;
   border-radius: 62px;
   border: none;
-  background-color: var(--gray-tertiary);
+  /* background-color: var(--gray-tertiary); */
   margin-left: 15px;
 }
 
@@ -105,6 +105,19 @@
   width: 35px;
   height: 35px;
 }
+
+.btn-transfer{
+  background: none;
+  border: none;
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+}
+.btn-transfer img{
+  width: 35px;
+  height: 35px;
+}
+
 
 .btn-pagar {
   background: none;
@@ -156,6 +169,7 @@
   border-radius: 10px;
   margin-top: 25px;
 }
+
 @media (min-width: 936px) and (max-width: 1225px) {
   .container-info-input{
     width: 50%;
@@ -168,8 +182,8 @@
   }
 
   .foto-perfil{
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
   }
   .container-infos{
     display: block;
@@ -265,6 +279,7 @@
   .linha-vertical{
     display: none;
   }
-
-
+  .extrato{
+    display: none;
+  }
 }

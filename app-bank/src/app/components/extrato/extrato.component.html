@@ -13,90 +13,18 @@
       </button>
     </div>
 
-      <div class="box-tipo-extrato">
+      <div class="box-tipo-extrato" *ngFor="let itens of serverService.extrato">
         <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
+          <img class="img-extrato" src="../../../assets/transfer-azul.svg" alt="icon de transferencia">
         </div>
         <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
+          <p class="tipo-extrato">{{itens.tipo_movimentacao}}</p>
+          <p class="nome-extrato">{{itens.tipo_movimentacao=="entrada" ? itens.cliente_origem : itens.cliente_destino}}</p>
         </div>
         <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
+          <p class="data-extrato">{{itens.data_transacao | date: 'dd MMMM'}}</p>
+          <p class="valor-extrato">{{itens.valor | currency: 'BRL':'symbol':'1.2-2'}}</p>
         </div>
       </div>
-
-      <div class="box-tipo-extrato">
-        <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
-        </div>
-        <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
-        </div>
-        <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
-        </div>
-      </div>
-
-      <div class="box-tipo-extrato">
-        <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
-        </div>
-        <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
-        </div>
-        <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
-        </div>
-      </div>
-
-      <div class="box-tipo-extrato">
-        <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
-        </div>
-        <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
-        </div>
-        <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
-        </div>
-      </div>
-
-      <div class="box-tipo-extrato">
-        <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
-        </div>
-        <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
-        </div>
-        <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
-        </div>
-      </div>
-
-      <div class="box-tipo-extrato">
-        <div class="container-img">
-          <img class="img-extrato" src="../../../assets/transferir.svg" alt="icon de transferencia">
-        </div>
-        <div>
-          <p class="tipo-extrato">Transferência enviada</p>
-          <p class="nome-extrato">Diego Abner</p>
-        </div>
-        <div class="box-data-valor">
-          <p class="data-extrato">15 Mai.</p>
-          <p class="valor-extrato">R$40,50</p>
-        </div>
-      </div>
-
-
   </div>
 </div>

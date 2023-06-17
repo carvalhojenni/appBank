@@ -1,0 +1,36 @@
+.container-transferencia-realizada{
+  height: 90vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
+.container-sucesso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-sucesso{
+  width: 80px;
+  height: 79px;
+  margin: 35px 0;
+}
+
+.titulo{
+  font-size: 28px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  font-weight: 500;
+}
+
+.btn-close{
+  color: var(--gray-secondary);
+  margin-bottom: 20px;
+  border: none;
+  background: none;
+  display: flex;
+  padding: 0;
+}

@@ -1,32 +1,40 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServerService } from '../server.service';
 
+interface dadosConta {
+  id: number,
+  titular: titular,
+  agencia: number,
+  conta: number,
+  senha: string,
+  saldo: number
+}
+
+interface titular {
+  id: number,
+  cpf: number,
+  nome_completo: string,
+  senha: string
+}
 @Component({
   selector: 'app-transferencia',
   templateUrl: './transferencia.component.html',
   styleUrls: ['./transferencia.component.css']
 })
 export class TransferenciaComponent {
-  valido! : string;
-  hide = false;
-  numberValue: string = '3.000,00';
-  isClicked: boolean = false;
+  dadosConta: dadosConta | undefined;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private serverService : ServerService,) { }
   ngOnInit(): void {
+    this.carregaDados();
   }
 
-  toggleDiv() {
-    this.isClicked = !this.isClicked;
-    this.hide = true;
-  }
-
-  close(){
+  home(){
     this.router.navigate(['home']);
   }
-
-  valorTransferencia(){
-    this.router.navigate(['contato-transferir'])
+  async carregaDados(){
+    this.dadosConta = await this.serverService.getDadosConta(this.serverService.cpf_origem);
   }
-
 }

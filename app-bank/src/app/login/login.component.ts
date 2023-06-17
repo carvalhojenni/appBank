@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ServerService } from '../server.service';
 
 @Component({
   selector: 'app-login',
@@ -9,39 +10,38 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   hide = true;
-  cpf!: string;
-  senha!: string ;
-  showErrorModal = false;
+  errorMessage! : string;
+  errorModal = false;
+  cpf: string = '';
+  senha: string = '';
 
-  // example = new FormGroup({
-  //   cpf: new FormControl('', Validators.required),
-  //   senha: new FormControl('', Validators.required)
+ constructor(
+  private router: Router,
+  private serverService : ServerService,
+  ) { }
 
-  // });
- constructor(private router: Router) { }
   ngOnInit(): void {
   }
 
-  // onSubmit(): void {
-  //   console.log(this.example.value);
-  //   this.router.navigate(['home']);
-  // }
+  async submitForm() {
+    console.log(this.cpf.length+ '   ' + this.senha.length)
 
-  submitForm() {
-    if (this.cpf || this.senha) {
-      this.showErrorModal = true;
-    } else {
-      // Lógica para enviar o formulário
+    if(this.cpf.length < 14 || this.senha.length < 6){
+      this.errorModal = true;
+      this.errorMessage = 'CPF e senha são obrigatórios.';
+    }
+    else if(await this.serverService.EfetuaLogin(this.cpf.replaceAll('.','').replaceAll('-',''), this.senha )){
       this.router.navigate(['home']);
-      console.log('Formulário enviado:', this.cpf, this.senha);
+    }
+    else {
+      this.errorModal = true;
+      this.errorMessage = 'CPF ou senha estão incorretos.';
     }
   }
 
-  closeModal() {
-    this.showErrorModal = false;
+  closeErrorModal() {
+    this.errorModal = false;
   }
-
-
 
 }
 

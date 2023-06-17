@@ -1,0 +1,32 @@
+<div>
+  <div class="container-valor">
+    <button class="btn-close" (click)=close()>
+      <mat-icon fontIcon="close"></mat-icon>
+    </button>
+    <h2>Qual é o valor da transferencia?</h2>
+    <div class="content-saldo">
+      <p>Saldo disponível em conta</p>
+      <div>
+        <span  class="saldo-total"  [ngClass]="{'number': !isClicked, 'asterisk': isClicked}">{{ isClicked ? '****' : numberValue | currency: 'BRL':'symbol':'1.2-2' }} </span>
+        <button type="button" class="btn-visibility" mat-icon-button matSuffixV (click)="toggleDiv()">
+        <mat-icon>{{isClicked ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      </div>
+    </div>
+    <div class="content-input">
+      <div>
+        <input prefix="R$"  pattern="[0-9]+([,\.][0-9]+)?"  mask="000000" class="input-saldo" type="text" format="number" [(ngModel)]="valido" >
+        <hr>
+      </div>
+      <button class="btn-enviar" type="button" [disabled]="!valido" (click)=valorTransferencia()> Continuar </button>
+  </div>
+
+  <div class="modal" *ngIf="errorModal">
+    <div class="modal-content">
+      <button (click)="closeErrorModal()">
+        <mat-icon fontIcon="close"></mat-icon>
+      </button>
+      <h3>{{ errorMessage }}</h3>
+    </div>
+  </div>
+</div>

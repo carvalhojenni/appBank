@@ -1,6 +1,22 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServerService } from 'src/app/server.service';
 
+interface dadosConta {
+  id: number,
+  titular: titular,
+  agencia: number,
+  conta: number,
+  senha: string,
+  saldo: number
+}
+
+interface titular {
+  id: number,
+  cpf: number,
+  nome_completo: string,
+  senha: string
+}
 @Component({
   selector: 'app-saldo',
   templateUrl: './saldo.component.html',
@@ -8,11 +24,14 @@ import { Router } from '@angular/router';
 })
 export class SaldoComponent {
   hide = false;
-  numberValue: string = '3.000,00';
+  dadosConta: dadosConta | undefined;
+  numberValue: number | undefined;
   isClicked: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private serverService : ServerService) { }
   ngOnInit(): void {
+    this.recebeSaldo();
   }
   toggleDiv() {
     this.isClicked = !this.isClicked;
@@ -22,5 +41,12 @@ export class SaldoComponent {
   extrato(){
     this.router.navigate(['page-extrato'])
   }
+
+  async recebeSaldo(){
+    this.dadosConta = await this.serverService.getDadosConta(this.serverService.cpf_origem);
+    this.numberValue = this.dadosConta?.saldo;
+    console.log(this.numberValue)
+  }
+
 
 }

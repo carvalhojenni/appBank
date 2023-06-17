@@ -1,0 +1,21 @@
+.content-nav-extrato{
+display: flex;
+}
+
+.content-page-extrato{
+  height: 120vh;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  border-radius: 15px 15px 0 0;
+  padding: 20px;
+}
+
+.btn-close{
+  color: var(--gray-secondary);
+  border: none;
+  background: none;
+  display: flex;
+  padding: 0;
+}

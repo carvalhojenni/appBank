@@ -1,0 +1,71 @@
+<div class="container-transferir">
+  <div class="info">
+    <div class="container-info-input">
+      <h1 class="nome">BANK</h1>
+      <div class="input-busca">
+        <input matInput class="busca" type="search" placeholder="Busca">
+        <button class="btn-busca" type="button">
+          <mat-icon aria-hidden="false" aria-label="Exemplo de ícone inicial" fontIcon="search"> </mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="info-perfil">
+      <div class="container-perfil">
+        <h3 class="usuario">Olá {{dadosConta?.titular?.nome_completo}}</h3>
+        <div class="info-agencia">
+          <p>Ag.</p>
+          <p class="agencia">000{{dadosConta?.agencia}}</p>
+          <p>Conta</p>
+          <p class="conta">{{dadosConta?.conta}}-1</p>
+        </div>
+      </div>
+     <img class="foto-perfil" src="../../assets/person.svg" alt="">
+    </div>
+  </div>
+  <div class="box-info-conta">
+    <div class="container-btn">
+      <button class="btn-home" (click)=home()>
+        <img src="../../assets/home-branco.svg" alt="">
+      </button>
+      <button class="btn-transfer">
+        <img src="../../assets/transfer-azul.svg" alt="">
+      </button>
+      <button class="btn-pagar">
+        <img src="../../assets/pagar.svg" alt="">
+      </button>
+      <button class="btn-mais">
+        <img src="../../assets/mais.svg" alt="">
+      </button>
+    </div>
+
+    <div class="container-infos">
+        <div class="container-contato-transferir">
+          <button class="btn-close" (click)=close()>
+            <mat-icon fontIcon="arrow_back_ios"></mat-icon>
+          </button>
+          <h2>Para quem você quer transferir?</h2>
+          <div class="content-contato">
+            <p>Busque um contato </p>
+          </div>
+          <div class="content-input">
+            <div>
+              <input  pattern="[0-9]+([,\.][0-9]+)?"  mask="000.000.000-00" class="input-saldo" type="text" format="number" placeholder="CPF" [(ngModel)]="contato" >
+              <hr>
+            </div>
+            <button class="btn-enviar" type="button" [disabled]="!contato" (click)=contatoTranferencia()> Continuar </button>
+        </div>
+
+        <div class="modal" *ngIf="errorModal">
+          <div class="modal-content">
+            <button (click)="closeErrorModal()">
+              <mat-icon fontIcon="close"></mat-icon>
+            </button>
+            <h3>{{ errorMessage }}</h3>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+
